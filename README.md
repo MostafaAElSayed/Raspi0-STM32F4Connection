@@ -10,7 +10,7 @@ the firmware, Finally the third stage is deploying the new firmware.
     • Authentication Digital Signature(Public-key encryption).
 =========================================================
 
-=========================================================
+
 ==Stage 1: Encryption, signing and sending the firmware==
 =========================================================
 
@@ -41,7 +41,7 @@ crypted it will be signed then it will be uploaded to the firebase.
       
       
       
-================================
+
 ==Stage 2: Download and verify==
 ================================
 
@@ -54,7 +54,7 @@ crypted it will be signed then it will be uploaded to the firebase.
 ![image](https://user-images.githubusercontent.com/40046072/234725331-9b51fe1f-a1c7-410a-8546-6b17180782ba.png)
 
     
-================================
+
 ==Stage 3: Deploy new firmware==
 ================================
 
