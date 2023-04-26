@@ -11,7 +11,7 @@ the firmware, Finally the third stage is deploying the new firmware.
 
 =========================================================
 ==Stage 1: Encryption, signing and sending the firmware==
-=========================================================
+---------------------------------------------------------
 
 This stage includes encrypting operations that occur to the file, after the file is en-
 crypted it will be signed then it will be uploaded to the firebase.
@@ -42,7 +42,7 @@ crypted it will be signed then it will be uploaded to the firebase.
       
 ================================
 ==Stage 2: Download and verify==
-================================
+--------------------------------
 
     After uploading the encrypted firmware and the encrypted hash (digest) from the
     firebase, the raspberry pi will calculate the hash of the encrypted firmware (HASH1)
@@ -50,12 +50,12 @@ crypted it will be signed then it will be uploaded to the firebase.
     raspberry pi will compare 2 HASHes, if both are the same then this firmware is trusted
     and it will be decrypted using raspberry pi private key.
     
-    ![image](https://user-images.githubusercontent.com/40046072/234725331-9b51fe1f-a1c7-410a-8546-6b17180782ba.png)
+![image](https://user-images.githubusercontent.com/40046072/234725331-9b51fe1f-a1c7-410a-8546-6b17180782ba.png)
 
     
 ================================
 ==Stage 3: Deploy new firmware==
-================================
+--------------------------------
 
     Finally, after firmware decryption by raspberry pi private key. The firmware will be
     sent to the STM32F429 ECU using UART communication protocol. If the firmware
@@ -67,7 +67,7 @@ crypted it will be signed then it will be uploaded to the firebase.
     own bootloader which designed to receieve the update using CAN communication
     protocol.
     
-    ![image](https://user-images.githubusercontent.com/40046072/234725351-fee4328e-9147-44f6-af50-3b1f826acffe.png)
+ ![image](https://user-images.githubusercontent.com/40046072/234725351-fee4328e-9147-44f6-af50-3b1f826acffe.png)
 
     
     
