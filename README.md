@@ -12,8 +12,10 @@ the firmware, Finally the third stage is deploying the new firmware.
 =========================================================
 ==Stage 1: Encryption, signing and sending the firmware==
 =========================================================
+
 This stage includes encrypting operations that occur to the file, after the file is en-
 crypted it will be signed then it will be uploaded to the firebase.
+
   ![image](https://user-images.githubusercontent.com/40046072/234724598-2621103b-d5cd-4085-bca4-263c8df8332f.png)
 
     1-Generating Public & Private Keys
@@ -41,17 +43,20 @@ crypted it will be signed then it will be uploaded to the firebase.
 ================================
 ==Stage 2: Download and verify==
 ================================
+
     After uploading the encrypted firmware and the encrypted hash (digest) from the
     firebase, the raspberry pi will calculate the hash of the encrypted firmware (HASH1)
     and it will decrypt the encrypted hash using developer PC public key. After that,
     raspberry pi will compare 2 HASHes, if both are the same then this firmware is trusted
     and it will be decrypted using raspberry pi private key.
+    
     ![image](https://user-images.githubusercontent.com/40046072/234725331-9b51fe1f-a1c7-410a-8546-6b17180782ba.png)
 
     
 ================================
 ==Stage 3: Deploy new firmware==
 ================================
+
     Finally, after firmware decryption by raspberry pi private key. The firmware will be
     sent to the STM32F429 ECU using UART communication protocol. If the firmware
     update is for it, the STM32F429 will install it using its built-in bootloader which
@@ -61,6 +66,7 @@ crypted it will be signed then it will be uploaded to the firebase.
     cation protocol. After that, the STM32F407 will install the new firmware using its
     own bootloader which designed to receieve the update using CAN communication
     protocol.
+    
     ![image](https://user-images.githubusercontent.com/40046072/234725351-fee4328e-9147-44f6-af50-3b1f826acffe.png)
 
     
