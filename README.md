@@ -70,5 +70,10 @@ crypted it will be signed then it will be uploaded to the firebase.
     
  ![image](https://user-images.githubusercontent.com/40046072/234725351-fee4328e-9147-44f6-af50-3b1f826acffe.png)
 
-    
-    
+
+
+
+HW Connection and Pinout: 
+-------------------------
+ ![image](https://user-images.githubusercontent.com/40046072/235367877-dbf823ed-2028-450f-9e3e-5937497f167a.png)
+
